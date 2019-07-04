@@ -1,2 +1,2 @@
- Projeto final do jogo
- criar um  jogo da forca.
+ Projeto final do curso de Ruby.
+ -criando um  jogo da forca.
