@@ -14,9 +14,8 @@ class Forca
 
 
    def adivinhar(letra)
-    
-     system( 'cls'  )
 
+      system( 'cls'  )
      cont = @acerto.size - 1;
 
      (0..cont).each do |item |
@@ -28,6 +27,7 @@ class Forca
      @acerto.count( letra ) == 0 ?  @tentativa +=1 : "" ;
      
      Corpo_enforcado.desenha( @tentativa.to_s )
+     
      puts @tentativa  ==  6 ? "Perdeu o jogo..." : @acerto
      puts @palavrar   ==  @acerto ? "ganhou o jogo" : ""; 
 
@@ -45,7 +45,6 @@ class Forca
 
 
    def vitoria()
-   
      !(@acerto ==  @palavrar) && @tentativa < 6
          
    end
