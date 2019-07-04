@@ -1,4 +1,5 @@
 
+require_relative "lerArquivotxt"
 
 class Forca   
  
@@ -7,24 +8,28 @@ class Forca
       
      @palavrar = palavra_proposta();
      @acerto = '_'*@palavrar.size;
+     @tentativa = 0;
 
    end
 
 
    def adivinhar(letra)
-         
+    
+     system( 'cls'  )
 
-     (0..@acerto.size-1).each do |item |
+     cont = @acerto.size - 1;
+
+     (0..cont).each do |item |
       
-       if @palavrar[item] == letra  
-       
-           @acerto[item] = letra
-
-       end
+      @palavrar[item] == letra  ?   @acerto[item] = letra : "";
 
      end
-
-     puts @acerto
+       
+     @acerto.count( letra ) == 0 ?  @tentativa +=1 : "" ;
+     
+     Corpo_enforcado.desenha( @tentativa.to_s )
+     puts @tentativa  ==  6 ? "Perdeu o jogo..." : @acerto
+     puts @palavrar   ==  @acerto ? "ganhou o jogo" : ""; 
 
 
    end   
@@ -41,17 +46,9 @@ class Forca
 
    def vitoria()
    
-     !(@acerto ==  @palavrar) 
+     !(@acerto ==  @palavrar) && @tentativa < 6
          
    end
-
-   def corpo_enforcado()
-   
-
-         
-   end
-
-
 
 
 
