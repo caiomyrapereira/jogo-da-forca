@@ -7,7 +7,7 @@ class  Corpo_enforcado
      
            while line = arq.gets
 
-           print line
+            print " "*35+line
     
            end
           

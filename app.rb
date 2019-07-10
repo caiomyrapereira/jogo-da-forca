@@ -1,13 +1,13 @@
 
 require_relative "lib/forca"
 require 'tty-cursor'
+cursor = TTY::Cursor
+system("cls")
 
 jogo = Forca.new;
 
 
- cursor = TTY::Cursor
 
-system('cls')
 
 while   jogo.vitoria()  do
  
