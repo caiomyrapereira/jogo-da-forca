@@ -1,7 +1,7 @@
 
 class Message 
    
-   def initialize( tentativa  , acerto )
+   def initialize(  acerto )
     @acerto = acerto;
     @move_x =  " " * 32;
     mostrar_acerto()

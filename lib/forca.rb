@@ -12,7 +12,7 @@ class Forca
      @letra_repetida = "";
      
      Corpo_enforcado.desenha( @tentativa.to_s )
-     @msg = Message.new( @tentativa , @acerto )
+     @msg = Message.new(  @acerto )
 
    end
 
