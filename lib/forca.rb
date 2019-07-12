@@ -1,31 +1,29 @@
-
-require_relative "CorpoEnforcado"
-require_relative "Palavra"
+require_relative "boneco"
+require_relative "palavra"
+require_relative "message"
 
 class Forca   
- 
+  attr_accessor :msg;
    def initialize
-      
+    
      @palavrar = Palavra.palavra_proposta();
-     @acerto = '_'*  @palavrar.size ;
+     @size = @palavrar.size;
+     @acerto = '_' *  @size ;
      @tentativa = 0;
      @letra_repetida = "";
+     
      Corpo_enforcado.desenha( @tentativa.to_s )
-
+     @msg = Message.new( @tentativa , @acerto )
 
    end
 
    def adivinhar(letra)
 
-     system( 'cls'  )
-
-    if @letra_repetida.count(letra) == 0
+    if @letra_repetida.count( letra ) == 0  &&  letra.size == 1
 
       @letra_repetida+=letra;
 
-      cont = @acerto.size - 1;
-
-      (0..cont).each do |item |
+      (0..@size).each do |item |
       
         @palavrar[item] == letra  ?   @acerto[item] = letra : "";
 
@@ -34,14 +32,12 @@ class Forca
       @acerto.count( letra ) == 0 ?  @tentativa +=1 : "" ;
      
       Corpo_enforcado.desenha( @tentativa.to_s )
-      puts
-      puts @tentativa  ==  6 ? "Perdeu o jogo!" : @acerto
-      puts @palavrar   ==  @acerto ? "Venceu o jogo!" : ""; 
+      @msg.resultado( @tentativa , @palavrar , @acerto )
 
     else
       
-      puts "'#{letra}' essa letra ja foram repetida"
-      puts "tente outro."  
+      Corpo_enforcado.desenha( @tentativa.to_s )
+      letra.size != 1 ? @msg.error() : @msg.repetida( letra ) 
     
     end 
 
@@ -54,5 +50,3 @@ class Forca
    end
 
 end
-
-
