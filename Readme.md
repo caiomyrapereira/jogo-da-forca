@@ -1,4 +1,11 @@
  Projeto final do curso de Ruby.
 
- 
- -criando um  jogo da forca.
+-Jogo da Forca
+
+* Para executar o jogo da forca.
+
+$ app.rb 
+
+or
+
+$ ruby app.rb 
