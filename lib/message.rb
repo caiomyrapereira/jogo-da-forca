@@ -31,7 +31,7 @@ class Message
 
    def error
       mostrar_acerto()
-      puts "#{ @move_x } não foram digita 1 letra!";
+      puts "#{ @move_x } não foram digitada uma letra!";
    end
 
 end
