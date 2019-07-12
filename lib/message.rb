@@ -25,13 +25,13 @@ class Message
 
    def repetida(letra)
       mostrar_acerto()
-   	puts "#{ @move_x } '#{ letra }' essa letra ja foram repetida,"
+   	  puts "#{ @move_x } '#{ letra }' essa letra ja foram repetida,"
       puts "#{ @move_x } tente outro."  
    end
 
    def error
       mostrar_acerto()
-      puts "#{ @move_x } não foram digitada uma letra!";
+      puts "#{ @move_x } não foram digitada somente uma letra!";
    end
 
 end
