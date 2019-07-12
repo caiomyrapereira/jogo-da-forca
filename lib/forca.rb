@@ -3,7 +3,6 @@ require_relative "palavra"
 require_relative "message"
 
 class Forca   
-  attr_accessor :msg;
    def initialize
     
      @palavrar = Palavra.palavra_proposta();
