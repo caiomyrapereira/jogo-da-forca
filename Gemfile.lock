@@ -2,12 +2,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     tty-cursor (0.7.0)
+    tty-platform (0.2.1)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
   tty-cursor
+  tty-platform
 
 BUNDLED WITH
    2.0.1

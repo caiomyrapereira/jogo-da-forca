@@ -1,10 +1,15 @@
 
 require_relative "lib/forca"
-require 'tty-cursor'
+require_relative "commdOS/clear"
 
+require 'tty-cursor'
+require 'tty-platform'
+
+platform = TTY::Platform.new
 cursor = TTY::Cursor
 
-system( "cls" )
+system( Clear.name( platform.os ) )
+
 
 jogo = Forca.new;
 
@@ -14,8 +19,9 @@ while   jogo.vitoria()  do
  
  print "digite uma letra:"
  letra  = gets.chomp;
+ 
+system( Clear.name( platform.os ) )
 
- system( "cls" )
  
  jogo.adivinhar( letra )
 
