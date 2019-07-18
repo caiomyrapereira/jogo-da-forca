@@ -5,8 +5,8 @@ require_relative "commdOS/clear"
 require 'tty-cursor'
 require 'tty-platform'
 
-platform = TTY::Platform.new
 cursor = TTY::Cursor
+platform = TTY::Platform.new
 
 system( Clear.name( platform.os ) )
 
