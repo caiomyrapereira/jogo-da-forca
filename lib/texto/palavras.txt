@@ -1,4 +1,4 @@
-azul
+﻿azul
 verde
 amarelo
 rosa
@@ -36,3 +36,13 @@ portugal
 mexico
 argentina
 uruguai
+amnesia
+complexidade
+filipendiado
+beija-flor
+cavalo-marinho
+alto-falante
+vaga-lume
+porquinho-da-índia
+montanha-russa
+dedo-duro
