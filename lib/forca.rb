@@ -7,7 +7,7 @@ class Forca
     
      @palavrar = Palavra.palavra_proposta();
      @size = @palavrar.size;
-     @acerto = '_' *  @size ;
+     @acerto =  @palavrar.split("").map{ |s| s == "-" ? s : "_" }.join();
      @tentativa = 0;
      @letra_repetida = "";
      
